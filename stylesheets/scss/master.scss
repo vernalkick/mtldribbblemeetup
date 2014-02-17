@@ -1,0 +1,378 @@
+//  ---------------------------------------------------------------------------
+//  Variables
+//  ---------------------------------------------------------------------------
+
+    // Colors
+    $hotpink: #ea4c89;
+
+    $helvetica: "Helvetica Neue", sans-serif;
+
+//  ---------------------------------------------------------------------------
+//  Mixins
+//  ---------------------------------------------------------------------------
+
+    @mixin media-upto($end) {
+      @media screen and (max-width: ($end - 1)) {
+        @content;
+      }
+    }
+
+    @mixin media-between($start, $end) {
+      @media screen and (min-width: $start) and (max-width: ($end - 1)) {
+        @content;
+      }
+    }
+
+    @mixin media-from($start) {
+      @media screen and (min-width: $start) {
+          @content;
+        }
+      }
+
+    @mixin keyframes($name) {
+      @-webkit-keyframes #{$name} {
+        @content;
+      }
+      @-moz-keyframes #{$name} {
+        @content;
+      }
+      @-o-keyframes #{$name} {
+        @content;
+      }
+      @keyframes #{$name} {
+        @content;
+      }
+    }
+
+//  ---------------------------------------------------------------------------
+//  Animations
+//  ---------------------------------------------------------------------------
+
+    @include keyframes(bounce) {
+
+      0% { -webkit-transform: translateY(1em); }
+      100% { -webkit-transform: translateY(-2em); }
+    }
+
+//  ---------------------------------------------------------------------------
+//  Base
+//  ---------------------------------------------------------------------------
+
+    body {
+      font-family: $helvetica;
+      margin: 0; padding: 0;
+    }
+
+    // Wrapper
+
+    .wrap {
+      width: 86%;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    // Links
+
+    a {
+      color: $hotpink;
+      text-decoration: none;
+    }
+
+    // Button
+
+    .btn {
+      font-weight: 300;
+      border: 1px solid $hotpink;
+      padding: .75em 1.25em;
+      line-height: 1em;
+      border-radius: 6px;
+      display: inline-block;
+        &:hover {
+          color: #fff;
+          background-color: $hotpink;
+        }
+    }
+
+    // Headings
+
+    h1, h2, h3, h4, h5, h6 {
+      margin: 0;
+    }
+
+    h1 {
+      font-size: 2em;
+    }
+
+    h2 {
+      font-size: 1.5em;
+    }
+
+    h4 {
+      font-size: 1.25em;
+      font-weight: 300;
+    }
+
+    // Form
+
+    input[type='text'], input[type='email'] {
+      background-color: transparent;
+      border: none;
+      appearance: none;
+      color: rgba(0,0,0,.6);
+      font-family: $helvetica;
+      font-size: 1.5em;
+      font-weight: 300;
+      padding: 1em 0;
+        &:focus { outline: none; }
+    }
+
+    ::-webkit-input-placeholder {
+       color: rgba(0,0,0,.2);
+    }
+
+    input[type='submit'] {
+      font-size: 1.25em;
+      background: none;
+      color: $hotpink;
+      font-weight: 300;
+      font-family: $helvetica;
+      border: none;
+      appearance: none;
+      cursor: pointer;
+      &:focus { outline: none; }
+    }
+
+    // Image
+
+    img {
+      max-width: 100%;
+    }
+
+    %icon {
+      font-family: "SSSocial";
+      font-style: normal;
+      font-weight: normal;
+      text-decoration: none;
+      text-rendering: optimizeLegibility;
+      white-space: nowrap;
+      -webkit-font-feature-settings: "liga";
+      -moz-font-feature-settings: "liga=1";
+      -moz-font-feature-settings: "liga";
+      -ms-font-feature-settings: "liga" 1;
+      -o-font-feature-settings: "liga";
+      font-feature-settings: "liga";
+      -webkit-font-smoothing: antialiased;
+    }
+
+//  Media Queries -------------------------------------------------------------
+
+    @include media-from(600px) {
+
+      h1 { font-size: 2.5em; }
+      h2 { font-size: 1.75em; }
+
+      .btn {
+        font-size: 1.125em;
+      }
+
+      input[type='submit'] {
+
+      }
+
+    }
+
+//  ---------------------------------------------------------------------------
+//  Header
+//  ---------------------------------------------------------------------------
+
+    header {
+      padding: 4em 0;
+    }
+
+//  Media Queries -------------------------------------------------------------
+
+    @include media-from(600px) {
+      header {
+        padding-bottom: 5em;
+      }
+    }
+
+//  ---------------------------------------------------------------------------
+//  Event info
+//  ---------------------------------------------------------------------------
+
+    .event-info {
+      text-align: center;
+
+        figure {
+          margin-bottom: 2.5em;
+          img { -webkit-animation: bounce .3s ease-out infinite alternate; }
+        }
+
+        ul {
+
+          list-style-type: none;
+          margin-bottom: 2.5em; padding: 0;
+
+            li {
+
+              display: inline-block;
+                & + li { margin-left: 1em; }
+
+              a {
+                color: #777;
+                font-weight: 300;
+                font-size: 1.125em;
+                  &:hover { color: $hotpink; }
+              }
+
+            }
+
+        }
+
+    }
+
+//  Media Queries -------------------------------------------------------------
+
+    @include media-from(600px) {
+
+      .event-info {
+        ul {
+          li {
+            a {
+              font-size: 1.5625em;
+            }
+          }
+        }
+      }
+
+    }
+
+//  ---------------------------------------------------------------------------
+//  Newsletter
+//  ---------------------------------------------------------------------------
+
+    #newsletter {
+      background-color: $hotpink;
+      padding: 2.5em 0;
+      text-align: center;
+      color: #fff;
+
+        input[type='text'], input[type='email'] {
+          text-align: center;
+          display: block;
+          width: 100%;
+        }
+
+        input[type='submit'] {
+          color: #fff;
+        }
+
+    }
+
+//  Media Queries -------------------------------------------------------------
+
+    @include media-from(600px) {
+
+      #newsletter {
+        padding: 4em 0;
+      }
+
+    }
+
+//  ---------------------------------------------------------------------------
+//  Attendees
+//  ---------------------------------------------------------------------------
+
+    #attendees {
+      text-align: center;
+      //padding: 2.5em 0;
+      h2 {
+        margin: 1.5em 0;
+      }
+      ul {
+        list-style-type: none;
+        padding: 0;
+        li {
+          width: 45%;
+          display: inline-block;
+          margin-bottom: 1em;
+          &:nth-child(2n+1) { margin-right: 4%; }
+          &:nth-child(2n) { margin-left: 4%; }
+          h4 {
+            white-space: nowrap;
+              overflow: hidden;
+              text-overflow: ellipsis;
+              a {
+                color: #333;
+                &:hover { color: $hotpink; }
+              }
+          }
+
+          figure { max-width: 180px; margin: 0 auto; }
+          img {
+            border-radius: 50%;
+            margin-bottom: .5em;
+          }
+          p {
+            font-size: .875em;
+            color: #999;
+            margin: 0;
+            display: none;
+          }
+          .links {
+            margin-top: .5em;
+            li {
+              width: auto;
+              display: inline-block;
+              padding: .25em;
+              a {
+                @extend %icon;
+
+              }
+            }
+          }
+        }
+
+      }
+    }
+
+//  Media Queries -------------------------------------------------------------
+
+    @include media-from(600px) {
+
+      #attendees {
+        h2 {
+          margin: 3.5em 0;
+        }
+        ul li {
+          margin: 0; margin-bottom: 1.5em;
+          width: 24%;
+          box-sizing: border-box;
+          padding: 1em;
+            img { margin-bottom: 1em; }
+            &:nth-child(2n+1) { margin-right: 0; }
+            &:nth-child(2n) { margin-left: 0; }
+            p { display: block; }
+        }
+      }
+
+    }
+
+//  ---------------------------------------------------------------------------
+//  Footer
+//  ---------------------------------------------------------------------------
+
+    footer {
+      background-color: #fafafa;
+      padding: 4em 0;
+    }
+
+//  Media Queries -------------------------------------------------------------
+
+    @include media-from(600px) {
+      footer {
+        padding: 5em;
+        padding-top: 7em;
+      }
+    }
