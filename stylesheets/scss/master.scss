@@ -76,6 +76,11 @@
     a {
       color: $hotpink;
       text-decoration: none;
+      transition: color .3s ease-in-out, background-color .3s ease-in-out, border-color .3s ease-in-out;
+        &:hover {
+          color: darken($hotpink, 10%);
+
+        }
     }
 
     // Button
@@ -226,6 +231,21 @@
                   &:hover { color: $hotpink; }
               }
 
+              &.date a, &.location a {
+                padding-left: 30px;
+              }
+
+              &.date a {
+                background: url('/images/calendar.svg') no-repeat center left;
+                background-size: contain;
+              }
+
+              &.location a {
+                background: url('/images/location.svg') no-repeat center left;
+                padding-left: 25px;
+                background-size: contain;
+              }
+
             }
 
         }
@@ -242,6 +262,20 @@
             a {
               font-size: 1.5625em;
             }
+
+            &.date a, &.location a {
+              padding-left: 35px;
+            }
+
+            &.date a {
+              background-size: auto;
+            }
+
+            &.location a {
+              padding-left: 29px;
+              background-size: auto;
+            }
+
           }
         }
       }
