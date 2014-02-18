@@ -301,9 +301,6 @@
           &:nth-child(2n+1) { margin-right: 4%; }
           &:nth-child(2n) { margin-left: 4%; }
           h4 {
-            white-space: nowrap;
-              overflow: hidden;
-              text-overflow: ellipsis;
               a {
                 color: #333;
                 &:hover { color: $hotpink; }
@@ -341,20 +338,32 @@
 //  Media Queries -------------------------------------------------------------
 
     @include media-from(600px) {
-
       #attendees {
         h2 {
           margin: 3.5em 0;
         }
         ul li {
-          margin: 0; margin-bottom: 1.5em;
-          width: 24%;
+          margin: 0; margin-bottom: .5em;
+          width: 31%;
           box-sizing: border-box;
           padding: 1em;
             img { margin-bottom: 1em; }
             &:nth-child(2n+1) { margin-right: 0; }
             &:nth-child(2n) { margin-left: 0; }
             p { display: block; }
+        }
+      }
+    }
+
+    @include media-from(800px) {
+
+      #attendees {
+        h2 {
+          margin: 3.5em 0;
+        }
+        ul li {
+          margin-bottom: 1.5em;
+          width: 24%;
         }
       }
 

@@ -179,14 +179,10 @@ header {
         margin-right: 4%; }
       #attendees ul li:nth-child(2n) {
         margin-left: 4%; }
-      #attendees ul li h4 {
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis; }
-        #attendees ul li h4 a {
-          color: #333; }
-          #attendees ul li h4 a:hover {
-            color: #ea4c89; }
+      #attendees ul li h4 a {
+        color: #333; }
+        #attendees ul li h4 a:hover {
+          color: #ea4c89; }
       #attendees ul li figure {
         max-width: 180px;
         margin: 0 auto; }
@@ -210,8 +206,8 @@ header {
     margin: 3.5em 0; }
   #attendees ul li {
     margin: 0;
-    margin-bottom: 1.5em;
-    width: 24%;
+    margin-bottom: .5em;
+    width: 31%;
     box-sizing: border-box;
     padding: 1em; }
     #attendees ul li img {
@@ -222,6 +218,12 @@ header {
       margin-left: 0; }
     #attendees ul li p {
       display: block; } }
+@media screen and (min-width: 800px) {
+  #attendees h2 {
+    margin: 3.5em 0; }
+  #attendees ul li {
+    margin-bottom: 1.5em;
+    width: 24%; } }
 footer {
   background-color: #fafafa;
   padding: 4em 0; }
