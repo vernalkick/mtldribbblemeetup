@@ -173,7 +173,8 @@ header {
     #attendees ul li {
       width: 45%;
       display: inline-block;
-      margin-bottom: 1em; }
+      margin-bottom: 1em;
+      vertical-align: top; }
       #attendees ul li:nth-child(2n+1) {
         margin-right: 4%; }
       #attendees ul li:nth-child(2n) {
