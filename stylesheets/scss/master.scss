@@ -49,9 +49,13 @@
 //  ---------------------------------------------------------------------------
 
     @include keyframes(bounce) {
-
       0% { -webkit-transform: translateY(1em); }
       100% { -webkit-transform: translateY(-2em); }
+    }
+
+    @include keyframes(background) {
+      0% { background-position: center center, center 0; }
+      100% { background-position: center center, center -175.5px; }
     }
 
 //  ---------------------------------------------------------------------------
@@ -407,9 +411,14 @@
 //  Footer
 //  ---------------------------------------------------------------------------
 
-    footer {
-      background-color: #fafafa;
+    footer.event-info {
+      background: -webkit-linear-gradient(top, rgba(68,68,68,0.3) 0%,rgba(68,68,68,1) 99%,rgba(68,68,68,1) 100%), url('/images/pattern@2x.png') repeat center 0;
+      -webkit-animation: background 2s linear infinite;
+      background-size: auto, 200px 175.5px;
       padding: 4em 0;
+        h1 { color: #fff; }
+        ul li a { color: #b3b3b3; }
+        .btn:hover { color: #444; }
     }
 
 //  Media Queries -------------------------------------------------------------
