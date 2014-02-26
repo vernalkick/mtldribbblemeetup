@@ -245,12 +245,12 @@
               }
 
               &.date a {
-                background: url('/images/calendar.svg') no-repeat center left;
+                background: url('../../images/calendar.svg') no-repeat center left;
                 background-size: contain;
               }
 
               &.location a {
-                background: url('/images/location.svg') no-repeat center left;
+                background: url('../../images/location.svg') no-repeat center left;
                 padding-left: 25px;
                 background-size: contain;
               }
@@ -417,7 +417,7 @@
 //  ---------------------------------------------------------------------------
 
     footer.event-info {
-      background: -webkit-linear-gradient(top, rgba(68,68,68,0.4) 0%,rgba(68,68,68,1) 99%,rgba(68,68,68,1) 100%), url('/images/pattern@2x.png') repeat center 0;
+      background: -webkit-linear-gradient(top, rgba(68,68,68,0.4) 0%,rgba(68,68,68,1) 99%,rgba(68,68,68,1) 100%), url('../../images/pattern@2x.png') repeat center 0;
       -webkit-animation: background 2s linear infinite;
       background-size: auto, 200px 175.5px;
       padding: 4em 0;

@@ -182,10 +182,10 @@ header {
       .event-info ul li.date a, .event-info ul li.location a {
         padding-left: 30px; }
       .event-info ul li.date a {
-        background: url("/images/calendar.svg") no-repeat center left;
+        background: url("../../images/calendar.svg") no-repeat center left;
         background-size: contain; }
       .event-info ul li.location a {
-        background: url("/images/location.svg") no-repeat center left;
+        background: url("../../images/location.svg") no-repeat center left;
         padding-left: 25px;
         background-size: contain; }
 
@@ -276,7 +276,7 @@ header {
     margin-bottom: 1.5em;
     width: 24%; } }
 footer.event-info {
-  background: -webkit-linear-gradient(top, rgba(68, 68, 68, 0.4) 0%, #444444 99%, #444444 100%), url("/images/pattern@2x.png") repeat center 0;
+  background: -webkit-linear-gradient(top, rgba(68, 68, 68, 0.4) 0%, #444444 99%, #444444 100%), url("../../images/pattern@2x.png") repeat center 0;
   -webkit-animation: background 2s linear infinite;
   background-size: auto, 200px 175.5px;
   padding: 4em 0; }
