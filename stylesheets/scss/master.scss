@@ -230,8 +230,8 @@
 
             li {
 
-              display: inline-block;
-                & + li { margin-left: 1em; }
+              display: block;
+                & + li { margin-top: .5em; }
 
               a {
                 color: #777;
@@ -262,6 +262,18 @@
     }
 
 //  Media Queries -------------------------------------------------------------
+
+    @include media-from(400px) {
+
+      .event-info ul li {
+        display: inline-block;
+        & + li {
+          margin-top: 0;
+          margin-left: 1em;
+        }
+      }
+
+    }
 
     @include media-from(600px) {
 

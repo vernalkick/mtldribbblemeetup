@@ -170,9 +170,9 @@ header {
     margin-bottom: 2.5em;
     padding: 0; }
     .event-info ul li {
-      display: inline-block; }
+      display: block; }
       .event-info ul li + li {
-        margin-left: 1em; }
+        margin-top: .5em; }
       .event-info ul li a {
         color: #777;
         font-weight: 300;
@@ -189,6 +189,12 @@ header {
         padding-left: 25px;
         background-size: contain; }
 
+@media screen and (min-width: 400px) {
+  .event-info ul li {
+    display: inline-block; }
+    .event-info ul li + li {
+      margin-top: 0;
+      margin-left: 1em; } }
 @media screen and (min-width: 600px) {
   .event-info ul li a {
     font-size: 1.5625em; }
